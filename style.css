@@ -49,6 +49,8 @@ nav {
     max-width: 100%;
     width: 100%;
     padding:min(1rem, 8%) 1rem;
+    background: var(--nav-bg);
+    color: var(--nav-text);
 }
 
 .logo {
@@ -202,11 +204,10 @@ nav {
 
     .nav-links {
         position: fixed;
-        top: 90px;
+        top: 80px;
         left: -100%;
-        height: calc(100% - 90px);
+        height: auto;
         width: 250px;
-        background: #222;
         flex-direction: column;
         padding-top: 60px;
         gap: 10px;
@@ -218,9 +219,7 @@ nav {
         background: var(--nav-bg);
         color: var(--nav-text);
     }
-    .nav-links ul li{ 
-        color: var(--nav-text);
-    }
+    
     .nav-links.show {
         left: 0;
     }
