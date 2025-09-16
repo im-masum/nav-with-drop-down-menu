@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multi Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">My Website</div>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        Services <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        Products <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#">E-commerce</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+</body>
+
+</html>
