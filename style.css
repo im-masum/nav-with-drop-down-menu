@@ -1,17 +1,17 @@
 :root {
     --bg-color: #f4f4f4;
-    --text-color: #333;
-    --nav-bg: #191818;
-    --nav-text: #fff;
+    --text-color: #000000;
+    --nav-bg: #ffffff;
+    --nav-text: #000000;
     --nav-hover-bg: #444;
     --dropdown-bg: #444;
     --dropdown-hover-bg: #555;
 }
 body.dark {
-    --bg-color: #121212;
+    --bg-color: #1a1919;
     --text-color: #e0e0e0;
-    --nav-bg: #1f1f1f;
-    --nav-text: #ffffff;
+    --nav-bg: #443f3f;
+    --nav-text: #fef9f9;
     --nav-hover-bg: #333;
     --dropdown-bg: #333;
     --dropdown-hover-bg: #444;
@@ -22,10 +22,10 @@ body.dark {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     background: var(--bg-color);
     color: var(--text-color);
@@ -62,6 +62,9 @@ nav {
     gap: 20px;
     list-style: none;
     transition: transform 0.4s ease-in-out;
+    z-index: 1000;
+    background: var(--nav-bg);
+    color: var(--nav-text);
 }
 
 .nav-links li {
@@ -93,7 +96,6 @@ nav {
     min-width: 180px;
     border-radius: 5px;
     overflow: hidden;
-
     max-height: 0;
     opacity: 0;
     transform: translateY(-10px);
@@ -133,15 +135,29 @@ nav {
     gap: 5px;
     cursor: pointer;
     z-index: 1100;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: var(--text-color);
     border-radius: 3px;
     transition: 0.3s;
 }
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 /* Overlay */
 .overlay {
@@ -199,8 +215,12 @@ nav {
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
+        background: var(--nav-bg);
+        color: var(--nav-text);
     }
-
+    .nav-links ul li{ 
+        color: var(--nav-text);
+    }
     .nav-links.show {
         left: 0;
     }
@@ -218,4 +238,4 @@ nav {
     .dropdown li a {
         padding-left: 25px;
     }
-}
+}\
