@@ -246,7 +246,6 @@ nav {
         flex-direction: column;
         padding-top: 60px;
         gap: 10px;
-        transform: translateX(0);
         transition: left 0.5s ease-in-out;
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -256,9 +255,12 @@ nav {
         margin: 0 10px;
     }
     .nav-links li {
-        width: 100%;
+        width: 95%;
         text-align: left;
         padding: 5px 20px;
+        border-bottom: 1px solid #ccc;
+        justify-content: center;
+        margin: 0 auto;
     }
     .nav-links.show {
         left: 0;
