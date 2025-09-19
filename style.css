@@ -184,7 +184,7 @@ nav {
 
 /* Dark mode button */
 .dark-toggle {
-    /* display: none; */
+    display: none;
     cursor: pointer;
     font-size: 1.3rem;
     background: none;
@@ -201,7 +201,7 @@ nav {
 }
 
 /* Add to style.css */
-section {
+ section {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 3s forwards;
@@ -214,7 +214,7 @@ section {
     padding: min(1rem, 8%) 1rem;
     margin:10px auto;
     border-radius: 12px;
-    box-shadow: 10px 4px 24px rgba(0,0,0,0.09);
+    box-shadow: 10px 10px 24px rgba(0,0,0,0.09);
     text-align: center;
     background: var(--bg-color);
     color: var(--text-color);
